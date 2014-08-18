@@ -1,0 +1,76 @@
+.social-box {
+  position: absolute;
+  width: 140px;
+  height: 90px;
+  top: -15px;
+  left: 50%;
+  margin-left: -65px;
+  display: none;
+  z-index: 888;
+  ul {
+    list-style: none;
+    li {
+      background-color: @grey;
+      -moz-transition: all 0.3s ease-in;
+      -webkit-transition: all 0.3s ease-in;
+      -o-transition: all 0.3s ease-in;
+      transition: all 0.3s ease-in;
+      
+      width: 30px;
+      height: 31px;
+      position: absolute;
+      -ms-transform: rotate(45deg); /* IE 9 */
+      -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+      transform: rotate(45deg);
+      &:nth-child(1) {left: 0px;}
+      &:nth-child(2) {left: 46px;}
+      &:nth-child(3) {left: 92px;}
+      &:nth-child(4) {left: 16%; top: 25%;}
+      &:nth-child(5) {left: 48.9%; top: 25%;}
+      &:nth-child(6) {left: 31.6%; top: 50.6%;}
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+      }
+      i {
+        text-align: center;
+        line-height: 30px;
+         -ms-transform: rotate(-45deg); /* IE 9 */
+        -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+        transform: rotate(-45deg);
+        width: 30px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+.social-box ul li:nth-child(4):hover {  
+  -ms-transform: rotate(225deg); /* IE 9 */
+  -webkit-transform: rotate(225deg); /* Chrome, Safari, Opera */
+  transform: rotate(225deg);
+}
+.social-box ul li:nth-child(5):hover {  
+  -ms-transform: rotate(225deg); /* IE 9 */
+  -webkit-transform: rotate(225deg); /* Chrome, Safari, Opera */
+  transform: rotate(225deg);
+}
+
+.facebook:hover, .facebook:focus {background-color: #3B5998;}
+.twitter:hover, .twitter:focus {background-color: #4099FF;}
+.social i{color: @base;}
+
+.moveIn {
+  display: block !important;
+  -webkit-animation: moveIn 2s ease both;
+	animation: moveIn 2s ease both;
+}
+@-webkit-keyframes moveIn {
+	from { -webkit-transform: translateY(-100%); }
+	to { -webkit-transform: translateY(0%); }
+}
+
+@keyframes moveIn {
+	from { transform: translateY(-100%); }
+	to { transform: translateY(0%); }
+}

@@ -1,0 +1,31 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+
+
+.logo {width: 245px;}
+.logo .logo-dark, .logo .logo-light {width: 245px;} 
+  
+.logo .slogan{
+  font-size: 9px;
+  letter-spacing: 2.2px;
+  top: 18px;
+  font-weight: bold;
+}
+  
+@-webkit-keyframes animLoadedLogo {
+	to { -webkit-transform: translate3d(0,100%,0) translate3d(0,100px,0) scale3d(1,1,1); }
+}
+@keyframes animLoadedLogo {
+	to { 
+    -webkit-transform: translate3d(0,100%,0) translate3d(0,100px,0) scale3d(1,1,1); 
+    transform: translate3d(0,100%,0) translate3d(0,100px,0) scale3d(1,1,1); 
+  }
+}
+  
+.social-box {ul {li {&:nth-child(5) {left: 49%; top: 24.9%;}}}}
+  
+.pt-page-1 {background-image: none, url('../../assets/img/brown_tile.jpg'); }
+  
+}
