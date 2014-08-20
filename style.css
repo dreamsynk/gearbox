@@ -5,7 +5,7 @@
   min-height: 52px;
   width: 100%;
   height: 100%;
-  background: url(../../assets/img/overlay.png) top left repeat, url(../../assets/img/loader_bg.jpg) no-repeat center center fixed;
+  background: url(assets/img/overlay.png) top left repeat, url(assets/img/loader_bg.jpg) no-repeat center center fixed;
   -webkit-background-size: auto, cover;
   -moz-background-size: auto, cover;
   -o-background-size: auto, cover;
@@ -230,7 +230,7 @@ body {
 .pt-page-1 {
   width: 100%;
   height: 100%;
-  background-image: url("../../assets/img/camera_bg.jpg"), url('../../assets/img/brown_tile.jpg');
+  background-image: url("assets/img/camera_bg.jpg"), url('assets/img/brown_tile.jpg');
   background-position: left center, top left;
   background-repeat: no-repeat, repeat;
 }
@@ -538,4 +538,66 @@ body {
   .pt-page-1 {
     background-image: none, url('../../assets/img/brown_tile.jpg');
   }
+}
+.my-tour-overlay {
+  display: none;
+  background: #666;
+  opacity: 0.5;
+  z-index: 9997;
+  min-height: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.my-tour-highlight {
+  background: white;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+  z-index: 9998;
+}
+/* Tourbus leg definitions element */
+.tourbus-legs {
+  display: none;
+}
+/* Container for tourbus leg */
+.tourbus-leg {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.12);
+}
+/* Interior of leg, clearfixed */
+.tourbus-leg-inner {
+  padding: 20px;
+  position: relative;
+  zoom: 1;
+}
+.tourbus-leg-inner:before,
+.tourbus-leg-inner:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.tourbus-leg-inner:after {
+  clear: both;
+}
+/*
+  remove top padding/margin on headings
+  because the interior of the leg has padding
+*/
+.tourbus-leg h1,
+.tourbus-leg h2,
+.tourbus-leg h3,
+.tourbus-leg h4,
+.tourbus-leg h5,
+.tourbus-leg h6 {
+  margin-top: 0;
+  padding-top: 0;
 }

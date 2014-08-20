@@ -11,7 +11,7 @@
   <link rel="shortcut icon" href="favicon.png">
   <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" />
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
   <script src="assets/js/libs/modernizr.custom.js"></script>
 </head>
@@ -37,7 +37,7 @@
 		<!-- main content -->
 		<div class="pages">
       <!-- social triangle box -->
-      <div class="social-box">
+      <div class="social-box" id="social">
         <ul>
           <li></li>
           <li></li>
@@ -48,7 +48,7 @@
         </ul>
       </div>
       
-      <div class="pt-triggers">
+      <div class="pt-triggers" id="menu">
         <ul>
           <li class="menu" data-animation="51"><a href="#"><i class="fa fa-camera"></i></a></li>
           <li class="menu" data-animation="52"><a href="#"><i class="fa fa-video-camera"></i></a></li>
@@ -68,6 +68,22 @@
 
 		</div>
 </div><!-- /container -->
+
+<!-- tooltips -->
+<ol id='tooltips'>
+
+  <li data-el='#menu' data-orientation='left' data-width='300'>
+    <h2>Navigation</h2>
+    <p>Here's where I explain how our navigation works...</p>
+    <a href='javascript:void(0);' class='tourbus-start'>Next...</a>
+  </li>
+
+  <li data-el='#social' data-orientation='bottom' data-width='300'>
+    <p>Buy now, etc, etc</p>
+    <a href='javascript:void(0);' class='tourbus-stop'>Done!</a>
+  </li>
+
+</ol>
   
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="assets/js/libs/jquery.dlmenu.js"></script>
@@ -75,6 +91,8 @@
 <script src="assets/js/libs/classie.js"></script>
 <script src="assets/js/libs/pathLoader.js"></script>
 <script src="assets/js/libs/main.js"></script>
+<script src="assets/js/libs/jquery.cookie.js"></script>
+<script src="assets/js/libs/jquery-tourbus.min.js"></script>
 <script src="assets/js/scripts.js"></script>
   
 </body>
