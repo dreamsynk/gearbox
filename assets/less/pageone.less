@@ -1,0 +1,81 @@
+.center-piece {
+  position: absolute;
+  width: 610px;
+  height: 610px;
+  top: 60%;
+  left: 50%;
+  margin: -305px 0 0 -305px;
+  list-style: none;
+}
+
+.center {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  top: 105px;
+  left: 105px;
+  background: #fff url("assets/img/demo1.jpg") center center no-repeat, rgba(0,0,0, 0.7);
+  background: 
+   url("assets/img/overlay-box.png") repeat,
+   url("assets/img/demo1.jpg") center center; 
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+  .core {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+  }
+}
+
+.viewer {
+  position: absolute;
+  display: inline-block;
+  top:200px;
+  left: 100px;
+  height: 40px;
+  width: 240px;
+  overflow: hidden;
+  span {
+    display: inline-block;
+    position: relative;
+    left: 40px;
+    background-color: #e1852b;
+    height: 40px;
+    width: 160px;
+  }
+  i {
+    display: block;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    &:before {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      left: 16px;
+      top: -40px;
+      background-color: #e1852b;
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      content: "";
+    }
+    &:after {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      right: 16px;
+      top: -40px;
+      background-color: #e1852b;
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      content: "";
+    }
+  }
+}
