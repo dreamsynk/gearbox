@@ -1,3 +1,15 @@
+.qr-code {
+  position: absolute;
+  max-width: 150px;
+  max-height: 150px;
+  right: 50px;
+  bottom: 50px;
+  display: inline-block;
+}
+.qr-code img {
+  height: auto;
+  width: 100%;
+}
 .ip-header {
   position: fixed;
   top: 0;
@@ -226,6 +238,7 @@
 html,
 body {
   height: 100%;
+  font-family: 'Lato', sans-serif;
 }
 .pt-page-1 {
   width: 100%;
@@ -388,7 +401,7 @@ body {
 }
 /* Triggers (menu and button) */
 .pt-triggers {
-  max-width: 60px;
+  max-width: 50px;
   top: 50px;
   right: 50px;
   position: absolute;
@@ -475,6 +488,9 @@ body {
   /* Chrome, Safari, Opera */
   transform: rotate(-45deg);
 }
+.menu-trigger {
+  display: none;
+}
 .pt-triggers .dl-menuwrapper button {
   margin-bottom: 0;
 }
@@ -506,19 +522,22 @@ body {
   }
 }
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   .logo {
-    width: 245px;
+    max-width: 320px;
   }
-  .logo .logo-dark,
-  .logo .logo-light {
-    width: 245px;
+  .logo img {
+    width: 90%;
   }
   .logo .slogan {
     font-size: 9px;
     letter-spacing: 2.2px;
     top: 18px;
     font-weight: bold;
+  }
+  .logo .logo-dark,
+  .logo .logo-light {
+    max-width: 320px;
   }
   @-webkit-keyframes animLoadedLogo {
     to {
@@ -536,8 +555,43 @@ body {
     top: 24.9%;
   }
   .pt-page-1 {
-    background-image: none, url('../../assets/img/brown_tile.jpg');
+    background-image: none, url('assets/img/brown_tile.jpg');
   }
+}
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+  .menu-in {
+    display: none;
+    overflow: visible !important;
+  }
+  .menu-trigger {
+    width: 50px;
+    height: 50px;
+    margin: 0 0 30px 0;
+    display: inline-block;
+    box-shadow: 0 0 0 5px #2c2c2c;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+  }
+  .trigger-active {
+    background-color: #2c2c2c;
+  }
+  .trigger-active i:before {
+    content: "\f037" !important;
+    color: #ff7e00;
+  }
+  .tourbus-container {
+    display: none;
+  }
+}
+.tooltips {
+  display: none;
 }
 .my-tour-overlay {
   display: none;
@@ -559,7 +613,7 @@ body {
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
   z-index: 9998;
 }
-/* Tourbus leg definitions element */
+/* Tooltip leg definitions element */
 .tourbus-legs {
   display: none;
 }
@@ -571,6 +625,7 @@ body {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
   border-radius: 2px;
   background: rgba(0, 0, 0, 0.12);
+  margin: 0 -40px;
 }
 /* Interior of leg, clearfixed */
 .tourbus-leg-inner {
@@ -600,4 +655,59 @@ body {
 .tourbus-leg h6 {
   margin-top: 0;
   padding-top: 0;
+}
+.tourbus-leg-inner p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 300;
+  text-align: center;
+}
+.tourbus-leg .tourbus-next {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  color: #ff7e00;
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+  background-color: #2c2c2c;
+  -ms-transform: rotate(45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(45deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+.tourbus-leg .tourbus-next:hover {
+  color: #fff;
+}
+.tourbus-leg .tip {
+  background-color: #2c2c2c;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  display: block;
+  left: -20px;
+  position: absolute;
+  bottom: -20px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.tourbus-leg .tip i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 40px;
+  font-style: normal;
+  -ms-transform: rotate(45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(45deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
 }

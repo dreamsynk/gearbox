@@ -1,31 +1,70 @@
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) {
+and (min-width : 320px) 
+and (max-width : 767px) {
 
+	.logo {
+		max-width: 320px;
+		img {
+			width: 90%;
+		}
+	}
 
-.logo {width: 245px;}
-.logo .logo-dark, .logo .logo-light {width: 245px;} 
+	.logo {
+		.slogan {
+			font-size: 9px;
+			letter-spacing: 2.2px;
+			top: 18px;
+			font-weight: bold;
+		}
+		.logo-dark, .logo-light {max-width: 320px;} 
+	}
+
+	@-webkit-keyframes animLoadedLogo {
+		to { -webkit-transform: translate3d(0,100%,0) translate3d(0,100px,0) scale3d(1,1,1); }
+	}
+	@keyframes animLoadedLogo {
+		to { 
+			-webkit-transform: translate3d(0,100%,0) translate3d(0,100px,0) scale3d(1,1,1); 
+			transform: translate3d(0,100%,0) translate3d(0,100px,0) scale3d(1,1,1); 
+		}
+	}
+
+	.social-box {ul {li {&:nth-child(5) {left: 49%; top: 24.9%;}}}}
+	
+	.pt-page-1 {background-image: none, url('assets/img/brown_tile.jpg');}
   
-.logo .slogan{
-  font-size: 9px;
-  letter-spacing: 2.2px;
-  top: 18px;
-  font-weight: bold;
 }
-  
-@-webkit-keyframes animLoadedLogo {
-	to { -webkit-transform: translate3d(0,100%,0) translate3d(0,100px,0) scale3d(1,1,1); }
-}
-@keyframes animLoadedLogo {
-	to { 
-    -webkit-transform: translate3d(0,100%,0) translate3d(0,100px,0) scale3d(1,1,1); 
-    transform: translate3d(0,100%,0) translate3d(0,100px,0) scale3d(1,1,1); 
-  }
-}
-  
-.social-box {ul {li {&:nth-child(5) {left: 49%; top: 24.9%;}}}}
-  
-.pt-page-1 {background-image: none, url('../../assets/img/brown_tile.jpg'); }
-  
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 1024px) {
+	.menu-in {
+		display: none;
+		overflow: visible !important;
+	}
+	.menu-trigger {
+		width: 50px;
+		height: 50px;
+		margin: 0 0 30px 0;
+		display:  inline-block;
+		box-shadow: 0 0 0 5px #2c2c2c;
+		text-align: center;
+		line-height: 50px;
+		font-size: 22px;
+		background-color: rgba(0,0,0,0);
+		-webkit-transition: all 0.4s ease-in-out;
+		-moz-transition: all 0.4s ease-in-out;
+		-o-transition: all 0.4s ease-in-out;
+		transition: all 0.4s ease-in-out;
+		cursor: pointer;
+	}
+	.trigger-active {
+		background-color: @grey;
+		i:before {
+			content: "\f037" !important;
+			color: #ff7e00;
+		}
+	}
+	.tourbus-container {display: none}
 }

@@ -30,3 +30,14 @@ setTimeout(function(){
 	
 });
 
+jQuery(document).ready(function() {
+	jQuery(".menu-trigger").click(function() {     
+  	$('.menu-in').toggle(300);
+		$('.menu-in').toggleClass('fadeIn');
+	});
+	
+	jQuery(".menu-trigger").click(function() {     
+		$(this).toggleClass('trigger-active');
+	});
+	
+});
