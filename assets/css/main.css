@@ -1,15 +1,3 @@
-.qr-code {
-  position: absolute;
-  max-width: 150px;
-  max-height: 150px;
-  right: 50px;
-  bottom: 50px;
-  display: inline-block;
-}
-.qr-code img {
-  height: auto;
-  width: 100%;
-}
 .ip-header {
   position: fixed;
   top: 0;
@@ -232,60 +220,13 @@
   height: 175px;
 }
 .center-piece {
-  position: absolute;
-  width: 610px;
-  height: 610px;
-  top: 60%;
-  left: 50%;
-  margin: -305px 0 0 -305px;
-  list-style: none;
-}
-.center-piece li {
-  position: absolute;
-  -ms-transform: rotate(45deg);
-  /* IE 9 */
-  -webkit-transform: rotate(45deg);
-  /* Chrome, Safari, Opera */
-  transform: rotate(45deg);
-}
-.center-piece li:nth-child(2) {
-  width: 200px;
-  height: 200px;
-  right: -78px;
-  top: 64px;
-  background: url("assets/img/demo2.jpg") no-repeat;
-}
-.center-piece li:nth-child(3) {
-  width: 100px;
-  height: 100px;
-  right: -28px;
-  top: 326px;
-  background: #ffffff url("assets/img/demo3.jpg") no-repeat;
-}
-.center-piece li:nth-child(4) {
-  width: 200px;
-  height: 200px;
-  left: -78px;
-  top: 346px;
-  background: #ffffff url("assets/img/demo4.jpg") no-repeat;
-}
-.center-piece li:nth-child(5) {
-  width: 100px;
-  height: 100px;
-  left: -28px;
-  top: 184px;
-  background: #ffffff url("assets/img/demo5.jpg") no-repeat;
+  position: relative;
 }
 .center {
   position: relative;
-  width: 400px;
-  height: 400px;
-  top: 105px;
-  left: 105px;
-  color: #fff;
-  text-align: center;
-  font-family: 'Lato', sans-serif;
-  background: url("assets/img/overlay-box.png") repeat, url("assets/img/demo1.jpg") center center;
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
   -ms-transform: rotate(45deg);
   /* IE 9 */
   -webkit-transform: rotate(45deg);
@@ -302,81 +243,6 @@
   /* Chrome, Safari, Opera */
   transform: rotate(-45deg);
 }
-.center .core h1 {
-  font-family: inherit;
-  font-size: 24px;
-  font-weight: 900;
-  color: inherit;
-  padding: 120px 0 0 0;
-}
-.center .core h1 span {
-  color: #ff7e00;
-}
-.center .core p {
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 300;
-  color: inherit;
-  line-height: 20px;
-}
-.showcase {
-  position: absolute;
-}
-.viewer {
-  position: absolute;
-  display: inline-block;
-  top: 350px;
-  left: 67px;
-  height: 67px;
-  text-align: center;
-  line-height: 85px;
-  text-decoration: none;
-  color: #2c2c2c;
-  width: 288px;
-  background: url("assets/img/viewable.png") no-repeat;
-  font-family: 'Lato', sans-serif;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-.viewer:hover {
-  color: #6c3b0b;
-}
-.this-up {
-  position: relative;
-  float: left;
-  margin: 60px;
-  display: inline-block;
-  width: 150px;
-  height: 302px;
-}
-.this-up img {
-  width: auto;
-  height: 100%;
-}
-.recycle {
-  position: absolute;
-  bottom: 60px;
-  left: 60px;
-  max-width: 340px;
-}
-.recycle i {
-  float: left;
-  font-size: 36px;
-  height: 57px;
-  line-height: 57px;
-  margin: 0 5% 0 0;
-  width: 15%;
-  color: #51664b;
-}
-.recycle p {
-  float: left;
-  display: inline-block;
-  font-size: 14px;
-  line-height: 18px;
-  width: 80%;
-  color: #2c2c2c;
-}
 * {
   padding: 0;
   margin: 0;
@@ -384,7 +250,6 @@
 html,
 body {
   height: 100%;
-  font-family: 'Lato', sans-serif;
 }
 .pt-page-1 {
   width: 100%;
@@ -547,7 +412,7 @@ body {
 }
 /* Triggers (menu and button) */
 .pt-triggers {
-  max-width: 50px;
+  max-width: 60px;
   top: 50px;
   right: 50px;
   position: absolute;
@@ -634,9 +499,6 @@ body {
   /* Chrome, Safari, Opera */
   transform: rotate(-45deg);
 }
-.menu-trigger {
-  display: none;
-}
 .pt-triggers .dl-menuwrapper button {
   margin-bottom: 0;
 }
@@ -668,22 +530,19 @@ body {
   }
 }
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   .logo {
-    max-width: 320px;
+    width: 245px;
   }
-  .logo img {
-    width: 90%;
+  .logo .logo-dark,
+  .logo .logo-light {
+    width: 245px;
   }
   .logo .slogan {
     font-size: 9px;
     letter-spacing: 2.2px;
     top: 18px;
     font-weight: bold;
-  }
-  .logo .logo-dark,
-  .logo .logo-light {
-    max-width: 320px;
   }
   @-webkit-keyframes animLoadedLogo {
     to {
@@ -701,73 +560,68 @@ body {
     top: 24.9%;
   }
   .pt-page-1 {
-    background-image: none, url('assets/img/brown_tile.jpg');
+    background-image: none, url('../../assets/img/brown_tile.jpg');
   }
 }
-
-@media only screen and (min-width: 320px) and (max-width: 1024px) {
-  .menu-in {
-    display: none;
-    overflow: visible !important;
-  }
-  .menu-trigger {
-    width: 50px;
-    height: 50px;
-    margin: 0 0 30px 0;
-    display: inline-block;
-    box-shadow: 0 0 0 5px #2c2c2c;
-    text-align: center;
-    line-height: 50px;
-    font-size: 22px;
-    background-color: rgba(0, 0, 0, 0);
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    cursor: pointer;
-  }
-  .trigger-active {
-    background-color: #2c2c2c;
-  }
-  .trigger-active i:before {
-    content: "\f037" !important;
-    color: #ff7e00;
-  }
-  .tourbus-container {
-    display: none;
-  }
+.my-tour-overlay {
+  display: none;
+  background: #666;
+  opacity: 0.5;
+  z-index: 9997;
+  min-height: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
-.tooltips {
+.my-tour-highlight {
+  background: white;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+  z-index: 9998;
+}
+/* Tourbus leg definitions element */
+.tourbus-legs {
   display: none;
 }
-=======
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .center-piece {
-    width: 320px;
-    height: 320px;
-    margin: -210px 0 0 -160px;
-  }
-  .center-piece li:nth-child(2),
-  .center-piece li:nth-child(3),
-  .center-piece li:nth-child(4),
-  .center-piece li:nth-child(5) {
-    display: none;
-  }
-  .center {
-    left: 10px;
-    width: 300px;
-    height: 300px;
-  }
-  .center .core h1 {
-    padding: 70px 0 0 20px;
-    font-size: 20px;
-  }
-  .viewer {
-    top: 231px;
-    left: 15px;
-  }
-  .this-up {
-    width: 110px;
-    height: 220px;
-  }
+/* Container for tourbus leg */
+.tourbus-leg {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.12);
+}
+/* Interior of leg, clearfixed */
+.tourbus-leg-inner {
+  padding: 20px;
+  position: relative;
+  zoom: 1;
+}
+.tourbus-leg-inner:before,
+.tourbus-leg-inner:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.tourbus-leg-inner:after {
+  clear: both;
+}
+/*
+  remove top padding/margin on headings
+  because the interior of the leg has padding
+*/
+.tourbus-leg h1,
+.tourbus-leg h2,
+.tourbus-leg h3,
+.tourbus-leg h4,
+.tourbus-leg h5,
+.tourbus-leg h6 {
+  margin-top: 0;
+  padding-top: 0;
 }
