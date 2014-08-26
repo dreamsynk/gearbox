@@ -7,30 +7,31 @@ jQuery(window).load(function() {
   jQuery(".pt-triggers").delay(4000).queue(function(){
 		$(this).addClass('fadeIn')
 	});
-	
-	// Tooltips
-setTimeout(function(){
-	
-	jQuery('#tooltips').tourbus({
-	autoDepart: true,
-  onLegStart: function( leg, bus ) {
-    if( leg.rawData.highlight ) {
-      leg.$target.addClass('my-tour-highlight');
-      $('.my-tour-overlay').show();
-    }
-  },
-  onLegEnd: function( leg, bus ) {
-    if( leg.rawData.highlight ) {
-      leg.$target.removeClass('my-tour-highlight');
-      $('.my-tour-overlay').hide();
-    }
-  }
+	jQuery(".center-piece").delay(4500).queue(function(){
+		$(this).addClass('fadeIn')
 	});
-	}, 5000);
+	jQuery(".tour").delay(5000).queue(function(){
+		$(this).addClass('fadeIn')
+	});
 	
 });
 
 jQuery(document).ready(function() {
+	
+	var trip4 = new Trip([
+		{ sel : $("#menu"), content : "This is the main menu. Use it to navigate through the website", animation: 'e'},
+		{ sel : $(".qr-code"), content : "This our QR code. Scan it to see our contact details", animation: 'n'}
+	], {
+		showNavigation : true,
+		showCloseBox : true,
+		delay : -1
+	});
+
+	$(".tour-start").on("click", function() {
+		trip4.start();
+	});
+	
+	
 	jQuery(".menu-trigger").click(function() {     
   	$('.menu-in').toggle(300);
 		$('.menu-in').toggleClass('fadeIn');
@@ -40,4 +41,22 @@ jQuery(document).ready(function() {
 		$(this).toggleClass('trigger-active');
 	});
 	
+  jQuery('.tooltip').tooltipster({
+   	animation: 'fall',
+   	delay: 200,
+   	theme: 'tooltipster-default',
+   	touchDevices: false,
+   	trigger: 'hover',
+		position: 'left',
+		offsetY: 0,
+		offsetX: 10
+	});
+	
+	$('.img-zoom').hover(function() {
+        $(this).addClass('transition');
+		
+    }, function() {
+        $(this).removeClass('transition');
+  });
+		
 });

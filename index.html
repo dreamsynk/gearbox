@@ -12,10 +12,6 @@
   <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" />
   <link rel="stylesheet" type="text/css" href="style.css" />
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<<<<<<< HEAD
-=======
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
->>>>>>> origin/master
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
   <script src="assets/js/libs/modernizr.custom.js"></script>
 </head>
@@ -55,20 +51,19 @@
       <div class="pt-triggers" id="menu">
 				<a class="menu-trigger"><i class="fa fa-bars"></i></a>
         <ul class="menu-in">
-          <li class="menu" data-animation="51"><a href="#"><i class="fa fa-camera"></i></a></li>
-          <li class="menu" data-animation="52"><a href="#"><i class="fa fa-video-camera"></i></a></li>
-					<li class="menu" data-animation="52"><a href="#"><i class="fa fa-lightbulb-o"></i></a></li>
-					<li class="menu" data-animation="52"><a href="#"><i class="fa fa-volume-up"></i></a></li>
-					<li class="menu" data-animation="52"><a href="#"><i class="fa fa-truck"></i></a></li>
+          <li class="menu" data-animation="51"><a href="#" class="tooltip" title="Camera Equipment"><i class="fa fa-camera"></i></a></li>
+          <li class="menu" data-animation="52"><a href="#" class="tooltip" title="Video Equipment"><i class="fa fa-video-camera"></i></a></li>
+					<li class="menu" data-animation="52"><a href="#" class="tooltip" title="Lighting"><i class="fa fa-lightbulb-o"></i></a></li>
+					<li class="menu" data-animation="52"><a href="#" class="tooltip" title="Sound"><i class="fa fa-volume-up"></i></a></li>
+					<li class="menu" data-animation="52"><a href="#" class="tooltip" title="Transport"><i class="fa fa-truck"></i></a></li>
         </ul>
       </div>
       
       <div id="pt-main" class="pt-perspective">
         <!-- pages start -->
         <div class="pt-page pt-page-1">
-<<<<<<< HEAD
-					<div class="qr-code"><img src="assets/img/qr_code.png" alt="Gearbox Contact Details" /></div>
-=======
+					
+					<div class="qr-code"><a href="" class="tooltip" title="QR Code, scan or click to view full details"><img src="assets/img/qr_code.png" alt="Gearbox Contact Details" /></a></div>
           
           <section>
             <ul class="center-piece">
@@ -79,10 +74,26 @@
                   <a class="viewer" href="#">View Rental Catalogue</a>
                 </div>
               </li>
-              <li><span class="showcase"></span></li>
-              <li><span class="showcase"></span></li>
-              <li><span class="showcase"></span></li>
-              <li><span class="showcase"></span></li>
+              <li>
+								<span class="showcase">
+									<img class="img-zoom" src="assets/img/demo2.jpg" width="200"/>
+								</span>
+							</li>
+              <li>
+								<span class="showcase">
+									<img class="img-zoom" src="assets/img/demo3.jpg" width="200"/>
+								</span>
+							</li>
+              <li>
+								<span class="showcase">
+									<img class="img-zoom" src="assets/img/demo5.jpg" width="200"/>
+								</span>
+							</li>
+              <li>
+								<span class="showcase">
+									<img class="img-zoom" src="assets/img/demo4.jpg" width="200"/>
+								</span>
+							</li>
             </ul>
             <span class="this-up"><img src="assets/img/this-side-up.png" /></span>
             
@@ -90,9 +101,16 @@
               <i class="fa fa-recycle"></i>
               <p>This website is made from FSC™ certified cardboard from well managed forest and other controlled sources.</p>
             </div>
+						
+						<div class="tour">
+							<div class="tour-inner">
+								<a class="tour-start">Start Tour</a>
+								<a class="tour-end">Skip Tour</a>
+							</div>
+						</div>
+						
           </section>
           
->>>>>>> origin/master
         </div>
 
         <div class="pt-page pt-page-2">
@@ -102,34 +120,17 @@
 
 		</div>
 </div><!-- /container -->
-<<<<<<< HEAD
 
-<!-- tooltips -->
-<ol id='tooltips' class="tooltips">
-
-  <li data-el='#menu' data-orientation='left' data-width='260'>
-    <p>Use the right menu icons to navigate through our website</p>
-    <a href='javascript:void(0);' class='tourbus-next'><i class="fa fa-plus"></i></a>
-		<span class="tip"><i>Tip</i></span>
-  </li>
-	<!--
-  <li data-el='#social' data-orientation='bottom' data-width='260'>
-    <p>Buy now, etc, etc</p>
-    <a href='javascript:void(0);' class='tourbus-stop'></a>
-  </li>
-	-->
-</ol>
-=======
->>>>>>> origin/master
-  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="assets/js/libs/jquery.dlmenu.js"></script>
-<script src="assets/js/libs/pagetransitions.js"></script>   
-<script src="assets/js/libs/classie.js"></script>
-<script src="assets/js/libs/pathLoader.js"></script>
-<script src="assets/js/libs/main.js"></script>
-<script src="assets/js/libs/jquery.cookie.js"></script>
-<script src="assets/js/libs/jquery-tourbus.min.js"></script>
+<script src="assets/js/libs/min/jquery-1.9.1.min.js"></script>
+<script src="assets/js/libs/min/jquery.dlmenu.min.js"></script>
+<script src="assets/js/libs/min/pagetransitions.min.js"></script>   
+<script src="assets/js/libs/min/classie.min.js"></script>
+<script src="assets/js/libs/min/pathLoader.min.js"></script>
+<script src="assets/js/libs/min/main.min.js"></script>
+<script src="assets/js/libs/min/jquery.cookie.min.js"></script>
+<script src="assets/js/libs/min/btnMorph.min.js"></script>
+<script src="assets/js/libs/min/jquery.tooltipster.min.js"></script>
+<script src="assets/js/libs/min/trip.min.js"></script>
 <script src="assets/js/scripts.js"></script>
   
 </body>
